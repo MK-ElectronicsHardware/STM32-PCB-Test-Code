@@ -1,0 +1,8 @@
+../Core/Src/PressureSense.c:53:13:PressureSense_Initialise	24	static
+../Core/Src/PressureSense.c:77:9:PressureSense_ReadPressure	32	static
+../Core/Src/PressureSense.c:118:13:ReadPressureDeviceCoefficients	48	static
+../Core/Src/PressureSense.c:169:13:ReadRawTemperature	24	static
+../Core/Src/PressureSense.c:183:13:ReadRawPressure	24	static
+../Core/Src/PressureSense.c:198:13:ReadRawData	32	static
+../Core/Src/PressureSense.c:253:9:CalculateTemperatureOffset	32	static
+../Core/Src/PressureSense.c:271:9:CalculateCompensatedPressure	224	static

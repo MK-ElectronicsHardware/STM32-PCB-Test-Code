@@ -1,0 +1,12 @@
+../Core/Src/main.c:216:6:base_test_read_adc	24	static,ignoring_inline_asm
+../Core/Src/main.c:272:6:UART1_transmit_mode	0	static
+../Core/Src/main.c:278:6:UART1_receive_mode	0	static
+../Core/Src/main.c:283:6:UART2_transmit_mode	0	static
+../Core/Src/main.c:290:6:UART2_receive_mode	0	static
+../Core/Src/main.c:295:6:UART3_transmit_mode	0	static
+../Core/Src/main.c:301:6:UART3_receive_mode	0	static
+../Core/Src/main.c:307:6:HAL_ADC_ConvCpltCallback	0	static
+../Core/Src/main.c:312:6:HAL_UART_RxCpltCallback	16	static
+../Core/Src/main.c:420:6:SystemClock_Config	80	static,ignoring_inline_asm
+../Core/Src/main.c:363:5:main	224	static,ignoring_inline_asm
+../Core/Src/main.c:701:6:Error_Handler	0	static,ignoring_inline_asm
