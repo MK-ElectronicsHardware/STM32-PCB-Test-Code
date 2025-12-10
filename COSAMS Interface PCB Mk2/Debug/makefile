@@ -60,8 +60,8 @@ all: main-build
 main-build: COSAMS\ Interface\ PCB\ Mk2.elf secondary-outputs
 
 # Tool invocations
-COSAMS\ Interface\ PCB\ Mk2.elf COSAMS\ Interface\ PCB\ Mk2.map: $(OBJS) $(USER_OBJS) C:\Users\MKing\Desktop\Temp\STM32\ Projects\ Old\ I7\STM32\ Projects\COSAMS\ Interface\ PCB\ Mk2\STM32F100C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "COSAMS Interface PCB Mk2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\MKing\Desktop\Temp\STM32 Projects Old I7\STM32 Projects\COSAMS Interface PCB Mk2\STM32F100C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COSAMS Interface PCB Mk2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+COSAMS\ Interface\ PCB\ Mk2.elf COSAMS\ Interface\ PCB\ Mk2.map: $(OBJS) $(USER_OBJS) C:\Users\MKing\Desktop\Matthew\STM32-PCB-Test-Code\COSAMS\ Interface\ PCB\ Mk2\STM32F100C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "COSAMS Interface PCB Mk2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\MKing\Desktop\Matthew\STM32-PCB-Test-Code\COSAMS Interface PCB Mk2\STM32F100C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="COSAMS Interface PCB Mk2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

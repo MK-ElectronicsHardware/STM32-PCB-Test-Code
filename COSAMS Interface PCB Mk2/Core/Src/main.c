@@ -170,14 +170,14 @@ void base_test_run()
 	int length=0;
 
 // all lines below here were commented out so that stephen could just display the raw PTX sensor pressure and temp readings
-//  this was done as a debugging excercise as on solo Mk2 his ptx readings were jumpy turns out the RTOS was returning 1 byte rathern than 2 bytes so rsoloution was very blocky
-//	length+= sprintf(buffer, "Thermistor %d ", thermistor_analogue);
-//	length+= sprintf(buffer + strlen(buffer), "Supply %d ", supply_mon_analogue);
-//	length+= sprintf(buffer + strlen(buffer), "Flow %d ", flow_analogue);
-//	length+= sprintf(buffer + strlen(buffer), "Encoder %d ", encoder);
-//	length+= sprintf(buffer + strlen(buffer), "Dig1 %d ", digital_input_1);
-//	length+= sprintf(buffer + strlen(buffer), "Dig2 %d ", digital_input_2);
-///	length+= sprintf(buffer + strlen(buffer), "PTX %ld ", pressure_sensor); //this is not transmitted as the temp reading returns 0 so( compensated & ptxraw = 0)
+//  All the I/O peripherals adc I2c information from the solo mk2 interface PCB is transmitted out on USART1 to hyper terminal
+	length+= sprintf(buffer, "Thermistor %d ", thermistor_analogue);
+	length+= sprintf(buffer + strlen(buffer), "Supply %d ", supply_mon_analogue);
+	length+= sprintf(buffer + strlen(buffer), "Flow %d ", flow_analogue);
+	length+= sprintf(buffer + strlen(buffer), "Encoder %d ", encoder);
+	length+= sprintf(buffer + strlen(buffer), "Dig1 %d ", digital_input_1);
+	length+= sprintf(buffer + strlen(buffer), "Dig2 %d ", digital_input_2);
+//	length+= sprintf(buffer + strlen(buffer), "PTX %ld ", pressure_sensor); //this is not transmitted as the temp reading returns 0 so( compensated & ptxraw = 0)
 	g_raw_pressure_sensor = (g_raw_pressure_sensor/6586); //scales the ptx sensor to 100 mbar 6658586/
 	length+= sprintf(buffer + strlen(buffer), "PTX %ld ", g_raw_pressure_sensor);
 	length+= sprintf(buffer + strlen(buffer), "RT %ld ", g_raw_temperature_sensor);
